@@ -1,0 +1,44 @@
+.container-post {
+    display: flex;
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    height: 70vh;
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+}
+
+.box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.box > div {
+    color: white;
+    font-size: 2.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 1;
+}
+
+.box:hover {
+    flex: 1 1 50%;
+    transition: all 1s .5s ease;
+}
+
+.box:hover > img {
+    width: 100%;
+    height: 100%;
+    transition: all 1s .5s ease;
+}

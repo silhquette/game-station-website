@@ -1,0 +1,150 @@
+.hero-img {
+    height: 400px;
+    width: 100%;
+    background: no-repeat scroll;
+    background-size: cover;
+}
+.hero-img::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.493),
+        rgba(0, 0, 0, 0)
+    );
+}
+.hero-img::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    bottom: -200px;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+.hero-img-1 {
+    background-image: url("https://www.wallpaperflare.com/static/979/532/21/video-games-landscape-dauntless-videogame-trees-wallpaper.jpg");
+    background-position: center;
+}
+.hero-img-2 {
+    background-image: url("https://www.wallpaperflare.com/static/530/162/401/overwatch-video-games-bastion-overwatch-mercy-overwatch-wallpaper.jpg");
+    background-position: center top;
+}
+.hero-img-3 {
+    background-image: url("https://www.10wallpaper.com/wallpaper/1920x1080/1809/Playerunknowns_Battlegrounds_2018_Game_Poster_1920x1080.jpg");
+    background-position: center;
+}
+.hero-img-4 {
+    background-image: url("https://images.unsplash.com/photo-1636325896894-19304103f89f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+    background-position: center;
+}
+.c-control {
+    width: 100px;
+}
+.line {
+    width: 100%;
+    height: 5px;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.line-color {
+    background-color: #96bb7c;
+}
+.thumb-img {
+    height: 150px;
+    overflow: hidden;
+}
+.card .card-body span.link-details {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.link-details .link-secondary {
+    position: absolute;
+    bottom: 5px;
+}
+
+.card-body {
+    position: relative;
+}
+
+/* ratting */
+.rating {
+    display: flex;
+    position: relative;
+    top: -7px;
+}
+
+.star {
+    min-width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.star input {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    cursor: pointer;
+    width: 13px;
+    top: 3px;
+    position: relative;
+}
+
+.rating label::before {
+    display: block;
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(161, 161, 161, 0.486);
+    position: relative;
+}
+
+.rating label::after {
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    color: #96bb7c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.rating label:hover::after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after {
+    opacity: 1;
+}
+
+.row {
+    width: 100%;
+}
+
+.toast-body {
+    padding-top: 5px;
+}
+
+.table-list td:hover {
+    color: #96bb7c;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .aside {
+        display: none;
+    }
+    .col-10 {
+        width: 100%;
+    }
+}
